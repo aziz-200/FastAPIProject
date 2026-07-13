@@ -9,6 +9,8 @@ uvicorn = "*"
 sqlalchemy = "*"
 sqlalchemy-utils = "*"
 psycopg2-binary = "*"
+werkzeug = "*"
+satus = "*"
 
 [dev-packages]
 
