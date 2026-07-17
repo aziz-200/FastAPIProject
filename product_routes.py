@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from auth_utils import get_current_subject
+from fastapi_jwt_auth import AuthJWT
 from models import User, Order
 from schemas import OrderModel, OrderStatusModel
 from database import session, engine
@@ -11,20 +11,6 @@ order_router = APIRouter(
     prefix='/order',
 )
 session = session(bind=engine)
-
-
-class AuthJWT:
-    """Compatibility wrapper for the old fastapi_jwt_auth API used below."""
-
-    def __init__(self, subject: str = Depends(get_current_subject)):
-        self.subject = subject
-
-    def jwt_required(self):
-        return None
-
-    def get_jwt_subject(self):
-        return self.subject
-
 
 @order_router.get('/')
 async def welcome_page(Authorize: AuthJWT=Depends()):

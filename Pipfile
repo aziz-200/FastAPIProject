@@ -10,7 +10,10 @@ sqlalchemy = "*"
 sqlalchemy-utils = "*"
 psycopg2-binary = "*"
 werkzeug = "*"
-satus = "*"
+fastapi-jwt-auth2 = "*"
+pydantic = "*"
+pyjwt = "*"
+fastapi-jwt-auth = "*"
 
 [dev-packages]
 

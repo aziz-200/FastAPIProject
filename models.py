@@ -35,6 +35,14 @@ class Order(Base):
     product_id = Column(Integer, ForeignKey('products.id'))
     product = relationship("Product", back_populates="orders")
 
+    @property
+    def order_statuses(self):
+        return self.order_status
+
+    @order_statuses.setter
+    def order_statuses(self, value):
+        self.order_status = value
+
     def __repr__(self):
         return f"<Order {self.id}>"
 
