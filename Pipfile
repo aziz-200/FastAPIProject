@@ -6,6 +6,14 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = "*"
+sqlalchemy = "*"
+sqlalchemy-utils = "*"
+psycopg2-binary = "*"
+werkzeug = "*"
+fastapi-jwt-auth2 = "*"
+pydantic = "*"
+pyjwt = "*"
+fastapi-jwt-auth = "*"
 
 [dev-packages]
 

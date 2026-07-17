@@ -9,3 +9,11 @@ GET http://127.0.0.1:8000/hello/User
 Accept: application/json
 
 ###
+
+GET http://127.0.0.1:8000/auth/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/orders/
+Accept: application/json
